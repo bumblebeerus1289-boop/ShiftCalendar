@@ -25,7 +25,6 @@ jobs:
 
       - name: Build APK
         run: |
-          cd ShiftCalendar_Android_Project
           gradle :app:assembleDebug
 
       - name: Upload APK
