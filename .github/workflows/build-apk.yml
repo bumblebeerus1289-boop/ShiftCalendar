@@ -40,3 +40,4 @@ jobs:
         with:
           name: ShiftCalendar-APK
           path: ShiftCalendar/app/build/outputs/apk/debug/app-debug.apk
+
