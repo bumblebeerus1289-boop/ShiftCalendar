@@ -31,7 +31,8 @@ jobs:
 
       - name: Build APK
         run: |
-          gradle :app:assembleDebug
+          cd ShiftCalendar_Android_Project
+gradle :app:assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
