@@ -586,7 +586,7 @@ public class MainActivity extends Activity {
     private float overtimeCost(String key, float hours, float coeff) {
         if (hours <= 0f) return 0f;
         Calendar c = parseDate(key);
-        int shifts = countShiftsForMonth(c.get(Calendar.YEAR), c.get(Calendar.MONTH));
+        int shifts = countWeekDaysForMonth(c.get(Calendar.YEAR), c.get(Calendar.MONTH));
         float salary = prefs.getFloat("salary", 0f);
         if (salary <= 0f || shifts <= 0) return 0f;
 
