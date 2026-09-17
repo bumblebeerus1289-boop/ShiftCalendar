@@ -570,7 +570,25 @@ public class MainActivity extends Activity {
                 .setNegativeButton("Отмена", null)
                 .show();
     }
+private int countWeekDaysForMonth(int year, int monthZeroBased) {
+    Calendar temp = Calendar.getInstance();
+    temp.set(year, monthZeroBased, 1);
 
+    int days = temp.getActualMaximum(Calendar.DAY_OF_MONTH);
+    int count = 0;
+
+    for (int d = 1; d <= days; d++) {
+        temp.set(year, monthZeroBased, d);
+
+        int day = temp.get(Calendar.DAY_OF_WEEK);
+
+        if (day != Calendar.SATURDAY && day != Calendar.SUNDAY) {
+            count++;
+        }
+    }
+
+    return count;
+}
     private int countShiftsForMonth(int year, int monthZeroBased) {
         Calendar temp = Calendar.getInstance();
         temp.set(year, monthZeroBased, 1);
