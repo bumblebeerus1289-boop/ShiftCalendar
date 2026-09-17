@@ -103,7 +103,7 @@ public class MainActivity extends Activity {
     private void buildMainScreen() {
         LinearLayout root = new LinearLayout(this);
         root.setOrientation(LinearLayout.VERTICAL);
-        root.setPadding(dp(12), dp(12), dp(12), dp(10));
+        root.setPadding(dp(12), dp(25), dp(12), dp(10));
         root.setBackgroundColor(Color.WHITE);
 
         LinearLayout header = new LinearLayout(this);
